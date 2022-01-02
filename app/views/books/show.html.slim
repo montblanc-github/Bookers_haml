@@ -1,0 +1,16 @@
+.Contents
+  = flash[:notice]
+
+  p.Contents__title
+    strong
+    | Title:
+    = @book.title
+
+  p.Contents__body
+    strong
+    | Body:
+    = @book.body
+
+  = link_to "Edit", edit_book_path, class: "Contents__link"
+  | |
+  = link_to "Back", books_path, class: "Contents__link"

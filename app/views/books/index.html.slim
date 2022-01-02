@@ -1,0 +1,23 @@
+= flash[:notice]
+
+h1.List
+  | Books
+
+table.Table
+  thead.TableHead
+    th.TableHead__title Title
+    th.TableHead__body Body
+    th.TableHead__colspan colspan = "3"
+  tbody.TableBody
+    - @books.each do |book|
+      tr.TableContents
+        td.TableContents__title = book.title
+        td.TableContents__body = book.body
+        td.TableContents__link = link_to "Show", book_path(book.id)
+        td.TableContents__link = link_to "Edit", edit_book_path(book.id)
+        td.TableContents__link = link_to "Destroy", book_path(book.id), method: :delete
+
+h2.NewBook
+  | New book
+
+= render "form", book: @book

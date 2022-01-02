@@ -1,0 +1,19 @@
+= form_with model:book, local: true, class:"Form" do |f|
+  - if book.errors.any?
+    .ErrorExplanation
+      h2.ErrorExplanation__heading
+        = pluralize(book.errors.count, "error")
+        | prohibited this book from being saved:
+
+      ul.ErrorExplanation__list
+        - book.errors.full_messages.each do |message|
+          li = message
+
+  .FormField
+    = f.label :title, class: "FormField__label"
+    = f.text_field :title, class: "FormField__title"
+  .FormField
+    = f.label :body, class: "FormField__label"
+    = f.text_area :body, class: "FormField__body"
+  .FormActions
+    = f.submit
