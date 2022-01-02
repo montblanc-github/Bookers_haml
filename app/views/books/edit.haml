@@ -1,11 +1,9 @@
 .Edit
-  = flash[:notice]
 
-  h1.Edit__heading
-    | Editing Book
+  %h1.Edit__heading Editing Book
 
   = render "form", book: @book
 
   = link_to "Show", book_path(@book.id), class: "Edit__link"
-  | |
+  |
   = link_to "Back", books_path, class: "Edit__link"
