@@ -2,11 +2,12 @@
   - if book.errors.any?
     .ErrorExplanation
       %h2.ErrorExplanation__heading
-        {= pluralize(book.errors.count, "error")} prohibited this book from being saved:
+        = pluralize(book.errors.count, "error")
+        prohibited this book from being saved:
 
       %ul.ErrorExplanation__list
         - book.errors.full_messages.each do |message|
-          %li = message
+          %li= message
 
   .FormField
     = f.label :title, class: "FormField__label"
