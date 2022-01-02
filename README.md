@@ -1,5 +1,5 @@
 # DMM WEBCAMPコンテンツ【アプリケーションを完成させよう】
-DMM WEBCAMPの学習コンテンツアプリケーションを完成させようの研修課題をslim記述したものです。
+DMM WEBCAMPの学習コンテンツアプリケーションを完成させようの研修課題をhaml記述したものです。
 
 ## イメージ
 **↓トップ画面**
@@ -23,7 +23,7 @@ Cloud9
 - Ruby on Rails 5.2.6
 - RSpec
 - Rubocop
-- Slim
+- Haml
 
 ## 機能一覧
 - 投稿機能
